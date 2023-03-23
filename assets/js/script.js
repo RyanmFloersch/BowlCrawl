@@ -32,7 +32,7 @@ placeSearch({
 
 //API Key for OpenWeatherMap 
 
-const openWeatherKey = "";
+// const openWeatherKey = "";
 
 // arry to store user search history
 var searchHistory
