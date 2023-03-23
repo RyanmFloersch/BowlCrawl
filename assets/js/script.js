@@ -1,6 +1,6 @@
 
 var map;
-
+var directionsLayer;
 //Script for MapQuests display
 
 window.onload = function () {
@@ -13,6 +13,8 @@ window.onload = function () {
   });
 
   map.addControl(L.mapquest.control());
+
+
 
 }
 
@@ -69,10 +71,12 @@ searchBtn.addEventListener('click', function (event) {
 
   var options = document.querySelectorAll(".option");
 
-  var markers = [];
+
 
   for (var choice of options) {
     choice.addEventListener('click', function (e) {
+      var searchBartext = document.querySelector('.place-search-input')
+      var searchBarAddress = searchText.value; 
       var destAddress = this.children[1].innerText;
 
       e.stopPropagation();
@@ -80,29 +84,37 @@ searchBtn.addEventListener('click', function (event) {
 
 
         var directions = L.mapquest.directions();
+        
 
         directions.route({
-          start: addressVar,
+          start: searchBarAddress,
           end: destAddress,
         }, directionsCallback);
 
-        console.log(directions.route);
+        // console.log(directions);
 
         function directionsCallback(error, response) {
 
-        
-          var directionsLayer = L.mapquest.directionsLayer({
+          if(map.hasLayer(directionsLayer)){
+            map.removeLayer(directionsLayer);
+          }else{
+            console.log('Layer not found');
+          }
+
+          directionsLayer = L.mapquest.directionsLayer({
             directionsResponse: response
             
           }).addTo(map);
+        
+
 
           return map;
         }
 
-      var routeUrl = "https://www.mapquestapi.com/directions/v2/route?key="+ key +"&from="+ addressVar+"&to="+destAddress;
+      var routeUrl = "https://www.mapquestapi.com/directions/v2/route?key="+ key +"&from="+ searchBarAddress+"&to="+destAddress;
       $.get(routeUrl).then(function( info) {
-          console.log(info); 
-          console.log(info.route.formattedTime);
+          // console.log(info); 
+          // console.log(info.route.formattedTime);
           var time = (info.route.formattedTime);
           $('#time').text( time);
 
