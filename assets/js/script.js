@@ -1,3 +1,4 @@
+
 //Script for MapQuests display
 window.onload = function() {
     L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
@@ -102,6 +103,7 @@ searchBtn.addEventListener('click', function (event) {
 
 // });
 
+
 //*** Search Radius takes a single line address (Denver, CO), make sure the function gathers 6 matches
 //*** The 6 matches should output to the 6 boxes, ordered from closest to farthest away(seems to already do this in the object)
 //*** In each box it should list the following: Name of the location, local Temp/possibly wind/rain?, distance away in miles 
@@ -119,3 +121,4 @@ searchBtn.addEventListener('click', function (event) {
 
 // // get the recent seareches out of local storage 
 // var recentSearchHistory = getRecentSearchHistory();
+
