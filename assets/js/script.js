@@ -1,8 +1,10 @@
 
+// local storage stuff
 
+// localStorage.setItem("location", "myLocation");
 
-window.onload = function () {
-    L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
+// var location = localStorage.getItem("location");
+// var myLocation = localStorage.getItem("myLocation");
 
     var map = L.mapquest.map('map', {
         center: [40.7749, -74.4194],
@@ -10,15 +12,21 @@ window.onload = function () {
         zoom: 12
     });
 
+// var button1 = document.querySelector('#button1');
 
-    map.addControl(L.mapquest.control());
+// button1.onsubmit = function() {
+//     document.querySelectorAll('.hide').style.display = "none";
+//     document.querySelectorAll('.page2').style.display = "initial";
+// };
 
 
-    var ps = placeSearch({
-        key: 'UB42wa7TNT1FiK1W50glEPa36ZoyVOqc',
-        container: document.querySelector('#place-search-input'),
-        limit: 6
-    });
+// placeSearch({
+//     key: 'key',
+//     container: document.querySelector('#place-search-input'),
+//     limit: 6
+
+// });
+
 
 
     var searchBar = ps.on('change', (e) => {
@@ -31,43 +39,12 @@ window.onload = function () {
             /*  Direction alyer */
     var directions = L.mapquest.directions();
 
-    directions.route({
-        start: searchBar.getVal(),
-        end: 'One Liberty Plaza, New York, NY 10006',
- 
-    }, directionsCallback);
+// const openWeatherKey = "";
 
-    function directionsCallback(error, response) {
-        
-        var directionsLayer = L.mapquest.directionsLayer({
-            directionsResponse: response
-        }).addTo(map);
+// // arry to store user search history
+// var searchHistory
+// const recentSearchDropdown = document.querySelector("#place-search-input");
 
-
-        return map;
-    }
-
-    });
-
-
-    L.marker([ 40.70289, -74.01394]).addTo(map);
-    /*
-    lat: 40.74845
-    lng: -73.98474
-    */
-
-
-
-
-
-    // var btn = document.querySelector('#showResult');
-
-    // btn.addEventListener('click', function (){
-    //     console.log(searchBar);
-
-
-    // });
-
-
-}
+// // get the recent seareches out of local storage 
+// var recentSearchHistory = getRecentSearchHistory();
 
