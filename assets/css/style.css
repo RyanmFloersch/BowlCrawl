@@ -15,7 +15,7 @@ body{
     margin-bottom: 0px;
 }
 
-.hero-body {
+/* .hero-body {
     background-color:#656464 ;
 }
  
@@ -27,6 +27,13 @@ body{
     font-size: small;
     border-radius: 25%;
 }
+#map {
+    border: 0;
+    width: auto;
+    height: auto;
+}
+
+
 
 /* the search field */
 #myInput {

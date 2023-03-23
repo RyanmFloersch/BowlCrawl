@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!-- Map Quest Place Search Style-->
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css"/>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>iDive</title>
 </head>
@@ -20,6 +20,7 @@
       </p> 
     </div>
   </section>
+  
   <style>
     .hero-body {
         /* The image used */
@@ -28,70 +29,61 @@
         /* set background size*/
         background-size:contain;
       }
-    </style>
+  </style>
 
     <!-- Temporary Seach bar-->
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Search</button>
-      <div id="myDropdown" class="dropdown-content">
-        <input type="text" placeholder="Enter Starting Location" id="myInput" onkeyup="filterFunction()">
-        <!-- <a href="#about">About</a>
-        <a href="#base">Base</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-        <a href="#custom">Custom</a>
-        <a href="#support">Support</a>
-        <a href="#tools">Tools</a> -->
-      </div>
-    </div>
-      </form>
-      <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
-          <div class="tile is-child box">
-            <p class="title"> Location 1 </p> 
-          </div>
-          <div class="tile is-child box">
-             <p class="title"> Location 2 </p> 
-          </div>
-          <div class="tile is-child box">
-            <p class="title"> Location 3 </p> 
-          </div>
-          <div class="tile is-child box">
-            <p class="title"> Location 4 </p> 
-          </div>
-          <div class="tile is-child box">
-            <p class="title"> Location 5 </p> 
-          </div>
-        </div>
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <p class="title"> Map </p>
-          </div>
-        </div>
-      </div> 
-    </form>
-    
+    <form class="box">
+        <div class="field">
+          <label class="label">Enter Starting Location</label>
+          <div class="control">
+            <input class="place-search-input" type="text" placeholder="Search Box">
+
+                <button class="button is-small is-responsive searchBtn">Search</button>
+
+              </div>
+        </div>  
+
+
     <!-- tile outline for second page -->
       
     <div class="tile is-ancestor">
         <div class="tile is-4 is-vertical is-parent">
           <div class="tile is-child box">
-            <p class="title">One</p>
+            <p id="placeName1" class="title">Location</p>
+            <p id="address1">Address:</p>
+            <p id="distance1">Distance:</p>
+            <p id="phone1">Phone:</p>
           </div>
           <div class="tile is-child box">
-            <p class="title">Two</p>
+            <p id="placeName2" class="title">Location</p>
+            <p id="address2">Address:</p>
+            <p id="distance2">Distance:</p>
+            <p id="phone2">Phone:</p>
           </div>
-        </div>
-        <div class="tile is-parent">
           <div class="tile is-child box">
-            <p class="title">Three</p>
+            <p id="placeName3" class="title">Location</p>
+            <p id="address3">Address:</p>
+            <p id="distance3">Distance:</p>
+            <p id="phone3">Phone:</p>
+          </div>
+          <div class="tile is-child box">
+            <p id="placeName4" class="title">Location</p>
+            <p id="address4">Address:</p>
+            <p id="distance4">Distance:</p>
+            <p id="phone4">Phone:</p>
           </div>
         </div>
       </div> 
-      
+    <!--The map element--> 
+    <div class="tile is-parent">
+      <div class="tile is-child box">
+        <div id="map"></div>
+      </div>
+    </div>
+    
     
     <!-- Map Quest place search -->
-    <!-- <script src="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.js"></script>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body> -->
