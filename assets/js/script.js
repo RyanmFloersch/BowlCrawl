@@ -1,42 +1,73 @@
 
-// local storage stuff
-
-localStorage.setItem("location", "myLocation");
-
-var location = localStorage.getItem("location");
-var myLocation = localStorage.getItem("myLocation");
-
-// hide first page and show second page after entering location
-
-var button1 = document.querySelector('#button1');
-
-button1.onsubmit = function() {
-    document.querySelectorAll('.hide').style.display = "none";
-    document.querySelectorAll('.page2').style.display = "initial";
-};
 
 
-placeSearch({
-    key: 'key',
-    container: document.querySelector('#place-search-input'),
-    limit: 6
+window.onload = function () {
+    L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
 
-});
-
-//*** Search Radius takes a single line address (Denver, CO), make sure the function gathers 6 matches
-//*** The 6 matches should output to the 6 boxes, ordered from closest to farthest away(seems to already do this in the object)
-//*** In each box it should list the following: Name of the location, local Temp/possibly wind/rain?, distance away in miles 
-//*** When a user clicks one of the 6 boxes, it should take the selected location and create a route on the map between your starting search and it
-//** Keep in mind, the directions takes coordinates rather than a single line address
+    var map = L.mapquest.map('map', {
+        center: [40.7749, -74.4194],
+        layers: L.mapquest.tileLayer('map'),
+        zoom: 12
+    });
 
 
-//API Key for OpenWeatherMap 
+    map.addControl(L.mapquest.control());
 
-const openWeatherKey = "";
 
-// arry to store user search history
-var searchHistory
-const recentSearchDropdown = document.querySelector("#place-search-input");
+    var ps = placeSearch({
+        key: 'UB42wa7TNT1FiK1W50glEPa36ZoyVOqc',
+        container: document.querySelector('#place-search-input'),
+        limit: 6
+    });
 
-// get the recent seareches out of local storage 
-var recentSearchHistory = getRecentSearchHistory();
+
+    var searchBar = ps.on('change', (e) => {
+        userSearchResult = e;
+        console.log(e);
+        console.log(e.result);
+        map.setView(e.result.latlng);
+        console.log(searchBar.getVal());
+        
+            /*  Direction alyer */
+    var directions = L.mapquest.directions();
+
+    directions.route({
+        start: searchBar.getVal(),
+        end: 'One Liberty Plaza, New York, NY 10006',
+ 
+    }, directionsCallback);
+
+    function directionsCallback(error, response) {
+        
+        var directionsLayer = L.mapquest.directionsLayer({
+            directionsResponse: response
+        }).addTo(map);
+
+
+        return map;
+    }
+
+    });
+
+
+    L.marker([ 40.70289, -74.01394]).addTo(map);
+    /*
+    lat: 40.74845
+    lng: -73.98474
+    */
+
+
+
+
+
+    // var btn = document.querySelector('#showResult');
+
+    // btn.addEventListener('click', function (){
+    //     console.log(searchBar);
+
+
+    // });
+
+
+}
+

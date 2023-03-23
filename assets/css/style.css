@@ -3,3 +3,11 @@
 .hide{
     display: none;
 }
+
+#map {
+    height: 200;
+    width: 200px;
+
+    position: fixed;
+    top: 500px;
+}
