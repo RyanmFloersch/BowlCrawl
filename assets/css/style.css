@@ -1,5 +1,45 @@
+body{
+    padding:20px;
+    background-color: black;
+}
+  
+.field.dropdown-item{
+    padding: px;
+    margin-bottom: 0px;
+}
+  
+.field.dropdown-item input{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 0px;
+}
+
+/* .hero-body {
+    background-color:#656464 ;
+}
+ 
+/* Drowpdown Button */
+.dropbtn {
+    background-color: rgb(88, 169, 255);
+    color: black;
+    padding: 4px;
+    font-size: small;
+    border-radius: 25%;
+}
+#map {
+    border: 0;
+    width: auto;
+    height: auto;
+}
 
 
-.hide{
-    display: none;
+
+/* the search field */
+#myInput {
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: auto;
+    border: none;
+    border-bottom: 1px solid #ddd;
 }
