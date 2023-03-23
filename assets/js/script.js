@@ -1,16 +1,16 @@
 
 // local storage stuff
 
-localStorage.setItem("location", "myLocation");
+// localStorage.setItem("location", "myLocation");
 
-var location = localStorage.getItem("location");
-var myLocation = localStorage.getItem("myLocation");
+// var location = localStorage.getItem("location");
+// var myLocation = localStorage.getItem("myLocation");
 
 // hide first page and show second page after entering location
 
 var button1 = document.querySelector('#button1');
 
-button1.onsubmit = function() {
+button1.onclick = function() {
     document.querySelectorAll('.hide').style.display = "none";
     document.querySelectorAll('.page2').style.display = "initial";
 };
@@ -35,7 +35,7 @@ placeSearch({
 const openWeatherKey = "";
 
 // arry to store user search history
-var searchHistory
+var searchHistory;
 const recentSearchDropdown = document.querySelector("#place-search-input");
 
 // get the recent seareches out of local storage 
