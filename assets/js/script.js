@@ -2,6 +2,7 @@
 var map;
 
 //Script for MapQuests display
+
 window.onload = function () {
   L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
 
@@ -14,7 +15,6 @@ window.onload = function () {
   map.addControl(L.mapquest.control());
 
 }
-
 
 //Stuff for searches
 var key = 'KYQuoQ65QQAYiVPGm5iTRCw0BEBjR2Hg';
