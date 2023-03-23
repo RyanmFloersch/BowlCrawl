@@ -12,6 +12,7 @@ window.onload = function() {
     map.addControl(L.mapquest.control());
   }
 
+
 //Stuff for searches
 var key = 'KYQuoQ65QQAYiVPGm5iTRCw0BEBjR2Hg';
 var searchBtn = document.querySelector('.searchBtn');
@@ -55,10 +56,6 @@ searchBtn.addEventListener('click', function (event) {
 }
     getRadiusData()
 
-
-
-    
-    
     
 
     // fetch(searchRadiusURL)
