@@ -13,36 +13,25 @@
 <body>
 
   <!--Header with logo and name -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <p class="has-text-light has-text-centered is-size-3">
-        iDive
-      </p> 
-    </div>
-  </section>
-  
-  <style>
-    .hero-body {
-        /* The image used */
-        background-image:
-        url(idive-high-resolution-color-logo.png);
-        /* set background size*/
-        background-size:contain;
-      }
-  </style>
+    <header class="hero is-small">
+        <div class="hero-body">
+            <img src="./assets/bowl-crawl-low-resolution-logo-color-on-transparent-background.png" class="has-text-light has-text-centered is-size-3">
+        </div>
+    </header>
 
     <!-- Temporary Seach bar-->
     <form class="box">
         <div class="field">
-          <label class="label">Enter Starting Location</label>
-          <div class="control">
-            <input class="place-search-input" type="text" placeholder="Search Box">
-
+            <!--Search instructions-->
+            <label class="label">Enter Your Starting Location Below:</label>
+            <div class="control">
+            <!--Insert text here-->
+                <input class="place-search-input" type="text" placeholder="Search Box">
+                <!--The search button-->
                 <button class="button is-small is-responsive searchBtn">Search</button>
-
-              </div>
+            </div>
         </div>  
-
+    </form>
 
     <!-- tile outline for second page -->
       
@@ -73,18 +62,16 @@
             <p id="phone4">Phone:</p>
           </div>
         </div>
-      </div> 
-    <!--The map element--> 
-    <div class="tile is-parent">
-      <div class="tile is-child box">
-        <div id="map"></div>
-      </div>
-    </div>
-    
+        <!--The Map Element-->
+        <div class="tile is-parent">
+            <div id="map" class="is-child"></div>
+        </div>
+        
+    </div> 
     
     <!-- Map Quest place search -->
     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
-</body> -->
+</body>
 </html>
