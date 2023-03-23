@@ -25,18 +25,18 @@
     .hero-body {
         /* The image used */
         background-image:
-        url(idive-high-resolution-color-logo.png);
+        url(ibowl-high-resolution-color-logo.png);
         /* set background size*/
         background-size:contain;
       }
   </style>
 
     <!-- Temporary Seach bar-->
-    <form class="box">
+    <form class="box" autocomplete='off'>
         <div class="field">
           <label class="label">Enter Starting Location</label>
-          <div class="control">
-            <input class="place-search-input" type="text" placeholder="Search Box">
+          <div class="control autocomplete">
+            <input id="myInput" type="text" placeholder="Search Box">
 
                 <button class="button is-small is-responsive searchBtn">Search</button>
 
