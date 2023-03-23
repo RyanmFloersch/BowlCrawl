@@ -10,6 +10,9 @@ window.onload = function() {
     });
 
     map.addControl(L.mapquest.control());
+
+
+    
   }
 
 
@@ -21,6 +24,8 @@ place1 = document.getElementById('#placeAddress');
 
 //*** Takes the text inputted, and processes the address on click */
 searchBtn.addEventListener('click', function (event) {
+    console.log("test");
+
     event.preventDefault();
     // console.log(searchText.value);
     var addressVar = searchText.value;
@@ -30,8 +35,8 @@ searchBtn.addEventListener('click', function (event) {
 
     //Begins pulling and sourcing the data
     function getRadiusData() {
+        console.log('test');
         $.get(searchRadiusURL).then(function (data) {
-            console.log(data);
             //Inserts data for the first returned location
             $('#placeName1').text(data.searchResults[0].name);
             $('#address1').text('Address: ' + data.searchResults[0].fields.address + ', ' + data.searchResults[0].fields.city + ', ' + data.searchResults[0].fields.state);
