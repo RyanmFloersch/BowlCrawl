@@ -1,15 +1,15 @@
 
 //Script for MapQuests display
 window.onload = function() {
-    L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
+  L.mapquest.key = 'ck2OXUAJsF0iz999XGQ62jyXo8AXOVp7';
 
-    var map = L.mapquest.map('map', {
-      center: [37.7749, -122.4194],
-      layers: L.mapquest.tileLayer('map'),
-      zoom: 12
-    });
-
-    map.addControl(L.mapquest.control());
+  var map = L.mapquest.map('map', {
+    center: [39.7392,-104.9903],
+    layers: L.mapquest.tileLayer('map'),
+    zoom: 12
+  });
+  
+  map.addControl(L.mapquest.control());
   }
 
 //Stuff for searches
