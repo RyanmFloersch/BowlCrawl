@@ -241,7 +241,6 @@ autocomplete(searchText, addressOld);
 
 
   //btn event listener end
-});
 
 
 // // get the recent seareches out of local storage 
