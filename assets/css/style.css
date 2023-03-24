@@ -41,7 +41,7 @@ header {
 }
 
 .place-search-input {
-    width: 25%;
+    width: 65%;
     height: auto;
 }
 
@@ -55,7 +55,6 @@ header {
 }
 /* the search field */
 #myInput {
-    box-sizing: border-box;
     font-size: 12px;
     padding: auto;
     border: none;
