@@ -2,22 +2,34 @@ body{
     padding:20px;
     background-color: black;
 }
-  
-.field.dropdown-item{
+
+#map {
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+/* .field.dropdown-item{
     padding: px;
     margin-bottom: 0px;
-}
+} */
   
-.field.dropdown-item input{
+/* .field.dropdown-item input{
     border: none;
     border-radius: 0px;
     box-shadow: none;
     margin-bottom: 0px;
+} */
+
+header {
+    background-color: blue;
 }
 
 /* .hero-body {
-    background-color:#656464 ;
-}
+        background-image: url(https://raw.githubusercontent.com/RyanmFloersch/iDive/main/assets/ibowl-high-resolution-color-logo.png);
+        background-size:contain;
+} */
  
 /* Drowpdown Button */
 .dropbtn {
@@ -27,14 +39,20 @@ body{
     font-size: small;
     border-radius: 25%;
 }
-#map {
-    border: 0;
-    width: auto;
+
+.place-search-input {
+    width: 25%;
     height: auto;
 }
 
+.button {
+    border-style: ridge;
+    border: 2px solid gray;
+}
 
-
+.button:hover {
+    border: 2px solid black;
+}
 /* the search field */
 #myInput {
     box-sizing: border-box;
@@ -43,6 +61,7 @@ body{
     border: none;
     border-bottom: 1px solid #ddd;
 }
+
 
 .autocomplete {
     position: relative;
@@ -75,3 +94,16 @@ body{
     background-color: DodgerBlue !important;
     color: #ffffff;
   }
+
+.label {
+    color: rgba(12, 47, 246, 0.885);
+}
+
+.button-is-small {
+    color: rgba(12, 47, 246, 0.885)
+}
+
+.title {
+    color: rgba(12, 47, 246, 0.885);
+}
+

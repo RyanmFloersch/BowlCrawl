@@ -13,78 +13,66 @@
 <body>
 
   <!--Header with logo and name -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <p class="has-text-light has-text-centered is-size-3">
-        iDive
-      </p> 
-    </div>
-  </section>
-  
-  <style>
-    .hero-body {
-        /* The image used */
-        background-image:
-        url(ibowl-high-resolution-color-logo.png);
-        /* set background size*/
-        background-size:contain;
-      }
-  </style>
+    <header class="hero is-small">
+        <div class="hero-body">
+            <img src="./assets/bowl-crawl-low-resolution-logo-color-on-transparent-background.png" class="has-text-light has-text-centered is-size-3">
+        </div>
+    </header>
 
     <!-- Temporary Seach bar-->
     <form class="box" autocomplete='off'>
         <div class="field">
-          <label class="label">Enter Starting Location</label>
-          <div class="control autocomplete">
-            <input id="myInput" type="text" placeholder="Search Box">
+            <!--Search instructions-->
+            <label class="label">Enter Your Starting Location Below:</label>
+            <div class="control autocomplete">
+            <!--Insert text here-->
+                <input id=myInput class="place-search-input" type="text" placeholder="Search Box">
+                <!--The search button-->
 
                 <button class="button is-small is-responsive searchBtn">Search</button>
-
-              </div>
+            </div>
         </div>  
-
+    </form>
 
     <!-- tile outline for second page -->
       
-    <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
-          <div class="tile is-child box">
+    <div  class="tile is-ancestor">
+        <div id="options" class=" tile is-4 is-vertical is-parent">
+          <div id="option1" class="option tile is-child box">
             <p id="placeName1" class="title">Location</p>
             <p id="address1">Address:</p>
             <p id="distance1">Distance:</p>
             <p id="phone1">Phone:</p>
           </div>
-          <div class="tile is-child box">
+          <div id="option2" class="option tile is-child box">
             <p id="placeName2" class="title">Location</p>
             <p id="address2">Address:</p>
             <p id="distance2">Distance:</p>
             <p id="phone2">Phone:</p>
           </div>
-          <div class="tile is-child box">
+          <div id="option3" class="option tile is-child box">
             <p id="placeName3" class="title">Location</p>
             <p id="address3">Address:</p>
             <p id="distance3">Distance:</p>
             <p id="phone3">Phone:</p>
           </div>
-          <div class="tile is-child box">
+          <div id="option4" class="option tile is-child box">
             <p id="placeName4" class="title">Location</p>
             <p id="address4">Address:</p>
             <p id="distance4">Distance:</p>
             <p id="phone4">Phone:</p>
           </div>
         </div>
-      </div> 
-    <!--The map element--> 
-    <div class="tile is-parent">
-      <div class="tile is-child box">
-        <div id="map"></div>
-      </div>
-    </div>
-    
+        <!--The Map Element-->
+        <div class="tile is-parent">
+            <div id="map" class="is-child"></div>
+        </div>
+        <p id="time"><p>
+    </div> 
     
     <!-- Map Quest place search -->
     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
-</body> -->
+</body>
 </html>
