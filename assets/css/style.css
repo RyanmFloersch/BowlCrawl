@@ -61,3 +61,15 @@ header {
     border: none;
     border-bottom: 1px solid #ddd;
 }
+
+.label {
+    color: rgba(12, 47, 246, 0.885);
+}
+
+.button-is-small {
+    color: rgba(12, 47, 246, 0.885)
+}
+
+.title {
+    color: rgba(12, 47, 246, 0.885);
+}
