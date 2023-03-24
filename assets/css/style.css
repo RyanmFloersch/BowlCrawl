@@ -9,35 +9,8 @@ body{
     height: auto;
 }
 
-
-/* .field.dropdown-item{
-    padding: px;
-    margin-bottom: 0px;
-} */
-  
-/* .field.dropdown-item input{
-    border: none;
-    border-radius: 0px;
-    box-shadow: none;
-    margin-bottom: 0px;
-} */
-
 header {
     background-color: blue;
-}
-
-/* .hero-body {
-        background-image: url(https://raw.githubusercontent.com/RyanmFloersch/iDive/main/assets/ibowl-high-resolution-color-logo.png);
-        background-size:contain;
-} */
- 
-/* Drowpdown Button */
-.dropbtn {
-    background-color: rgb(88, 169, 255);
-    color: black;
-    padding: 4px;
-    font-size: small;
-    border-radius: 25%;
 }
 
 .place-search-input {

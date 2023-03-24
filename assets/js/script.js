@@ -11,9 +11,6 @@ window.onload = function () {
     zoom: 12
   });
   map.addControl(L.mapquest.control());
-
-
-
 }
 
 //Stuff for searches
@@ -162,29 +159,11 @@ autocomplete(searchText, addressOld);
           $('#distance4').text('Distance: ' + data.searchResults[3].distance + ' miles');
           $('#phone4').text('Phone: ' + data.searchResults[3].fields.phone);
       })
-}
+  }
   getRadiusData()
-
-
-
-  
-  
-  
-
-  // fetch(searchRadiusURL)
-  //     .then((response) => {
-  //         return response.json();
-  //     })
-  //     .then((data) => {
-  //         var results = data;
-  //         console.log(results);
-  //         // place1.innerText(data.searchResults[2].name)
-  //     })
-      // document.getElementById(#place1).innerText(results.searchResults[2].name)
 })
 
   var options = document.querySelectorAll(".option");
-
 
 
   for (var choice of options) {
@@ -231,17 +210,10 @@ autocomplete(searchText, addressOld);
           // console.log(info.route.formattedTime);
           var time = (info.route.formattedTime);
           $('#time').text( time);
-
+          console.log(time)
 
         });
       
 
     });
   }
-
-
-  //btn event listener end
-
-
-// // get the recent seareches out of local storage 
-// var recentSearchHistory = getRecentSearchHistory();
