@@ -20,14 +20,15 @@
     </header>
 
     <!-- Temporary Seach bar-->
-    <form class="box">
+    <form class="box" autocomplete='off'>
         <div class="field">
             <!--Search instructions-->
             <label class="label">Enter Your Starting Location Below:</label>
-            <div class="control">
+            <div class="control autocomplete">
             <!--Insert text here-->
-                <input class="place-search-input" type="text" placeholder="Search Box">
+                <input id=myInput class="place-search-input" type="text" placeholder="Search Box">
                 <!--The search button-->
+
                 <button class="button is-small is-responsive searchBtn">Search</button>
             </div>
         </div>  
